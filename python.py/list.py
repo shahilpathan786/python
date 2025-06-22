@@ -75,7 +75,43 @@ while True :
     else:
         print("Try again")
 
-print("Your guesses : " , guesses)        
+print("Your guesses : " , guesses)   
+
+# .........///////////./////////////////.......conatct book ................,,,,,,,,,,,,,,,......#
+
+contact = []
+
+def show_menu() :
+    print("\n ---Contact Book")
+    print("1. Add contact")
+    print("2. View contact")
+    print("3. Search Contact")
+    print("4. Delete Contact")
+    print("5. Exit")
+
+def add_contact():
+    name = input("Enter name :")
+    number = input("Enter your number : ")
+    contact.append([name , number])
+    print("Contact added")
+
+def view_contacts():
+    if not contact:
+        print("NO CONTACT ADDED")
+    else:
+        print("\n ------All contacts------")
+        for i, contact in enumerate(contact , start= 1):
+            print(f"{i}.Name : {contact[0]} , phone: {contact[1]}")
+
+def search():
+    name = input("Enter the name to search")
+    found = False
+    for contacts in contact:
+        if contact[0].lower() == name.lower():
+            contact.remove(contacts)
+                        
+    
+
 
 
 
